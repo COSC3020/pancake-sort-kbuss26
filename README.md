@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/-m0g1A8z)
 # Pancake Sort
 
 There is an abstract data type (ADT) called a *pancake array*, which provides
@@ -28,4 +29,17 @@ element into its correct position.
 What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
+
+### Response
+
+The asymptotic complexity in terms of the number of comparisons is $T(n) \in \Theta(n^2)$.
+This is because finding the greatest element in the set iterates over $(n - i)$ elements in 
+the $ith$ iteration over n elements, which translates to 
+$T(n) = n(n-i) = n^2 - in \in \Theta(n^2)$.
+
+The asymptotic complexity in terms of the number of flips is $T'(n) \in \Theta(n)$,
+where $T'(n)$ represents the runtime of the number of flips in an array with $n$
+elements. In my algorithm, the greatest element is flipped to the first element of the 
+array, then flipped to the $ith$ position of the array in the $ith$ iteration. This 
+sequential pair of flips translates to $T'(n) = 2n \in \Theta(n)$, for 2 is a constant.
 
